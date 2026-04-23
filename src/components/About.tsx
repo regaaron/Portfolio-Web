@@ -8,7 +8,7 @@ export const About = () => {
     return (
         <section id="about" className="py-32">
             <div
-                ref={ref}
+                ref={ref as React.RefObject<HTMLDivElement>}
                 className={`max-w-6xl mx-auto px-6 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
             >
                 <SectionLabel number="01" label="About" />

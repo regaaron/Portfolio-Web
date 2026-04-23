@@ -1,4 +1,4 @@
-export const SectionLabel = ({ number, label }) => {
+export const SectionLabel = ({ number , label }: { number: string; label: string }) => {
     return (
         <div className="flex items-center gap-3 mb-4">
             <span className="font-mono text-[11px] text-emerald-400 tracking-[0.2em]">

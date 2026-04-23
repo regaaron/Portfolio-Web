@@ -1,4 +1,4 @@
-export const GlassCard = ({ children, className = "", hover = true }) => {
+export const GlassCard = ({ children, className = "", hover = true } : { children: React.ReactNode; className?: string; hover?: boolean }) => {
     return (
         <div
             className={`

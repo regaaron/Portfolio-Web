@@ -1,12 +1,11 @@
 export const ProfileCard = () => {
-    const avatar = "https://api.dicebear.com/7.x/notionists/svg?seed=luisaaron";
     return (
         <div className="flex flex-col items-center text-center">
 
             {/* Imagen */}
             <div className="relative group">
                 <img
-                    src="/public/aaron.png"
+                    src="aaron.png"
                     alt="Avatar Luis Aaron"
                     className="w-full h-full object-cover"
                 />

@@ -7,7 +7,7 @@ export const Contact = () => {
     const [ref, visible] = useScrollReveal();
     const [copied, setCopied] = useState("");
 
-    const copy = (text, label) => {
+    const copy = (text: string, label: string) => {
         navigator.clipboard.writeText(text).then(() => {
             setCopied(label);
             setTimeout(() => setCopied(""), 2000);

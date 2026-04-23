@@ -15,7 +15,7 @@ export const Hero = () => {
 
     useEffect(() => {
         const word = words[wIdx];
-        let timeout;
+        let timeout: any;
         if (!deleting && typed.length < word.length) {
             timeout = setTimeout(() => setTyped(word.slice(0, typed.length + 1)), 80);
         } else if (!deleting && typed.length === word.length) {

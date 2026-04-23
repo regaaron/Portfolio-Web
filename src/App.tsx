@@ -12,7 +12,15 @@ import { Contact } from "./components/Contact";
 /* ─────────────────────────────────────────────
 UTILS
 ───────────────────────────────────────────── */
-export const colorMap = {
+
+type ColorStyles = {
+    bg: string;
+    text: string;
+    border: string;
+    dot: string;
+    glow: string;
+};
+export const colorMap: Record<string, ColorStyles> = {
     emerald: { bg: "bg-emerald-500/10", text: "text-emerald-400", border: "border-emerald-500/20", dot: "bg-emerald-400", glow: "shadow-emerald-500/20" },
     blue: { bg: "bg-blue-500/10", text: "text-blue-400", border: "border-blue-500/20", dot: "bg-blue-400", glow: "shadow-blue-500/20" },
     violet: { bg: "bg-violet-500/10", text: "text-violet-400", border: "border-violet-500/20", dot: "bg-violet-400", glow: "shadow-violet-500/20" },

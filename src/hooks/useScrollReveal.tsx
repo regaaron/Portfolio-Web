@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 
-export const useScrollReveal = () => {
-    const ref = useRef(null);
+export const useScrollReveal = (): [React.RefObject<HTMLElement>, boolean] => {
+    const ref = useRef<HTMLElement>(null);
     const [visible, setVisible] = useState(false);
     useEffect(() => {
         const obs = new IntersectionObserver(
@@ -11,5 +11,5 @@ export const useScrollReveal = () => {
         if (ref.current) obs.observe(ref.current);
         return () => obs.disconnect();
     }, []);
-    return [ref, visible];
+    return [ref as React.RefObject<HTMLElement>, visible];
 }

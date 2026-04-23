@@ -1,6 +1,4 @@
 
-import { Code, Server, Database, Shield, Smartphone, Mail, Map, Flame, Cpu, Globe } from "lucide-react";
-
 /* ─────────────────────────────────────────────
 DATA
 ───────────────────────────────────────────── */

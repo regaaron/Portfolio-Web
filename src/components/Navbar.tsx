@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export const NAV_LINKS = ["about", "skills", "projects", "experience", "contactme"];
 
-export const  Navbar = ({ active }) => {
+export const  Navbar = ({ active } : { active: string }) => {
     const [scrolled, setScrolled] = useState(false);
     useEffect(() => {
         const fn = () => setScrolled(window.scrollY > 30);
