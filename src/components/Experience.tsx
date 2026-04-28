@@ -1,7 +1,49 @@
-import { EXPERIENCE } from "@/data/data";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import  { GlassCard } from "./ui/GlassCard";
 import { SectionLabel } from "./ui/SectionLabel";
+
+export const EXPERIENCE = [
+    {
+        role: "Full-stack Developer",
+        company: "EGEL PRO — Exam Preparation Platform",
+        period: "Enero 2024 — Febrero 2025",
+        location: "Aguascalientes, MX",
+        desc: "Desarrollo de una plataforma web para la preparación del examen EGEL mediante evaluaciones diarias. Implementé frontend en Angular y backend con Node.js y MySQL, incluyendo APIs REST para gestión de preguntas y seguimiento de progreso del usuario.",
+        current: false,
+    },
+    {
+        role: "Full-stack Developer",
+        company: "Gruas App — Tow Truck Platform",
+        period: "Jun 2023 — Dic 2023",
+        location: "Aguascalientes, MX",
+        desc: "Desarrollo de aplicación web para gestión de servicios de grúas. Implementé dashboard administrativo, integración con Google Maps API para visualización de ubicaciones y APIs REST para autenticación y asignación de servicios.",
+        current: false,
+    },
+    {
+        role: "Front-end Developer",
+        company: "Home-Lock — Property Rental Platform",
+        period: "Ene 2023 — May 2023",
+        location: "Aguascalientes, MX",
+        desc: "Desarrollo de interfaz de usuario para plataforma de reservas tipo Airbnb usando Angular. Integré autenticación con Firebase, persistencia en Firestore y flujo de confirmaciones por correo electrónico.",
+        current: false,
+    },
+    {
+        role: "Android Developer",
+        company: "Mathquest — Educational Game",
+        period: "Ago 2022 — Dic 2022",
+        location: "Aguascalientes, MX",
+        desc: "Desarrollo de juego educativo para Android en Kotlin con mecánicas por turnos, animaciones de sprites y almacenamiento local mediante SQLite.",
+        current: false,
+    },
+    {
+        role: "Java Developer",
+        company: "Plants vs Zombies Style Game",
+        period: "Mar 2022 — Jul 2022",
+        location: "Aguascalientes, MX",
+        desc: "Proyecto universitario de videojuego tipo tower defense desarrollado en Java, enfocado en la implementación de lógica de juego, manejo de colisiones y aplicación de principios de programación orientada a objetos.",
+        current: false,
+    },
+];
 
 export const  Experience = () => {
     const [ref, visible] = useScrollReveal();

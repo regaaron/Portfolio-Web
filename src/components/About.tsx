@@ -1,10 +1,19 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { GlassCard } from "./ui/GlassCard";
 import { SectionLabel } from "./ui/SectionLabel";
+import { useState } from "react";
 
 
 export const About = () => {
     const [ref, visible] = useScrollReveal();
+    const [copied, setCopied] = useState("");
+
+    const copy = (text: string, type: string) => {
+        navigator.clipboard.writeText(text).then(() => {
+            setCopied(type);
+            setTimeout(() => setCopied(""), 3000);
+        });
+    };
     return (
         <section id="about" className="py-32">
             <div
@@ -19,17 +28,18 @@ export const About = () => {
                 <div className="grid md:grid-cols-2 gap-16 items-start">
                     <div className="space-y-6 text-white/50 text-lg leading-relaxed font-light">
                         <p>
-                            Soy estudiante de{" "}
-                            <span className="text-white/80">Ingeniería en Sistemas Computacionales</span> en la Universidad Autónoma de Aguascalientes, con graduación esperada en{" "}
-                            <span className="text-emerald-400">diciembre 2025</span>.
+                            Soy <span className="text-white/80">Ingeniero en Sistemas Computacionales</span> recién egresado,
+                            enfocado en desarrollo <span className="text-white/80">full-stack</span> y tecnologías modernas.
                         </p>
+
                         <p>
-                            Mi experiencia abarca desarrollo{" "}
-                            <span className="text-white/80">full-stack</span> con plataformas de seguridad universitaria, apps de servicio tipo Uber, plataformas de reservas y juegos educativos para Android.
+                            Actualmente busco mi primera oportunidad profesional para trabajar en proyectos reales,
+                            aportar valor a un equipo y seguir creciendo como desarrollador.
                         </p>
+
                         <p>
-                            Comprometido con el crecimiento profesional en{" "}
-                            <span className="text-white/80">tecnologías frontend modernas</span> y aplicaciones centradas en el usuario.
+                            Tengo experiencia construyendo aplicaciones web y móviles, incluyendo plataformas tipo Uber,
+                            sistemas universitarios y proyectos con enfoque en experiencia de usuario.
                         </p>
                         <div className="pt-2 flex gap-4">
                             <span className="inline-flex items-center gap-1.5 text-sm text-white/40">
@@ -70,7 +80,9 @@ export const About = () => {
                                 </div>
                                 <div>
                                     <p className="text-white/80 font-medium text-sm">Aguascalientes, México</p>
-                                    <p className="text-white/30 text-sm mt-0.5">Disponible para trabajo remoto</p>
+                                    <p className="text-white/30 text-sm mt-0.5">
+                                        Abierto a oportunidades remotas, híbridas o presenciales
+                                    </p>
                                     <p className="text-blue-400 font-mono text-xs mt-2 tracking-wide">OPEN TO RELOCATION</p>
                                 </div>
                             </div>
@@ -79,18 +91,22 @@ export const About = () => {
                         {/* Contact quick */}
                         <GlassCard className="p-6">
                             <div className="space-y-3">
-                                <a href="mailto:aaron_lopez222@hotmail.com" className="flex items-center gap-3 text-white/40 hover:text-white/70 transition-colors text-sm group">
-                                    <svg className="w-4 h-4 group-hover:text-emerald-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <button
+                                    onClick={() => copy("aaron_lopez222@hotmail.com", "email")}
+                                    className="flex items-center gap-3 text-white/40 hover:text-white/70 transition-colors text-sm group"
+                                >  <svg className="w-4 h-4 group-hover:text-emerald-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                     </svg>
-                                    aaron_lopez222@hotmail.com
-                                </a>
-                                <a href="tel:+524493877833" className="flex items-center gap-3 text-white/40 hover:text-white/70 transition-colors text-sm group">
-                                    <svg className="w-4 h-4 group-hover:text-emerald-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    {copied === "email" ? "✓ Copiado" : "aaron_lopez222@hotmail.com"}
+                                </button>
+                                <button
+                                    onClick={() => copy("+524493877833", "phone")}
+                                    className="flex items-center gap-3 text-white/40 hover:text-white/70 transition-colors text-sm group"
+                                > <svg className="w-4 h-4 group-hover:text-emerald-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                     </svg>
-                                    (52+) 449 387 7833
-                                </a>
+                                    {copied === "phone" ? "✓ Copiado" : "(52+) 449 387 7833"}
+                                </button>
                             </div>
                         </GlassCard>
                     </div>

@@ -91,7 +91,7 @@ export const Hero = () => {
 
                     {/* Stats row */}
                     <div className="flex flex-wrap gap-8 pt-8 border-t border-white/[0.06]">
-                        {[["5+", "Proyectos"], ["3+", "Años exp."], ["6+", "Tecnologías"], ["Dic 2025", "Graduación"]].map(([num, label]) => (
+                        {[["5+", "Proyectos"], ["1+", "Años exp."], ["6+", "Tecnologías"], ["Dic 2025", "Graduación"]].map(([num, label]) => (
                             <div key={label}>
                                 <div className="font-mono text-2xl text-white font-bold">{num}</div>
                                 <div className="font-mono text-[11px] text-white/30 tracking-widest mt-1">{label.toUpperCase()}</div>

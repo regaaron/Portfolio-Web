@@ -68,15 +68,6 @@ export const Contact = () => {
                             </button>
                         </div>
 
-                        <a
-                            href="mailto:aaron_lopez222@hotmail.com"
-                            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-emerald-500 text-black font-mono text-sm tracking-wider font-bold hover:bg-emerald-400 transition-all duration-200 hover:scale-105 active:scale-100 shadow-lg shadow-emerald-500/25"
-                        >
-                            ENVIAR EMAIL
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                            </svg>
-                        </a>
                     </div>
                 </div>
             </div>
