@@ -140,7 +140,7 @@ export const MINI_PROJECTS = [
 ];
 
 export const Projects = () => {
-    const [selected, setSelected] = useState<number | null>(null);
+    const [selected, setSelected] = useState<number | null>(1);
     const [showMini, setShowMini] = useState(false);
     const [ref, visible] = useScrollReveal();
 
