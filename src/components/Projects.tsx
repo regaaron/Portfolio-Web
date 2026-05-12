@@ -58,25 +58,22 @@ export const PROJECTS = [
   },
   {
     id: 3,
-    title: "Home-Lock",
-    subtitle: "Airbnb-style Rental Platform",
-    period: "Ene 2023 — May 2023",
+    title: "Teslo-shop",
+    subtitle: "E-commerce form the course of React by devTalles",
+    period: "Apr 2026 — May 2026",
     featured: false,
     description:
-      "Plataforma de reservas de propiedades con carruseles interactivos, autenticación Firebase, persistencia Firestore y sistema de confirmaciones por email.",
+      "E-commerce desarrollado como proyecto final del curso de React by devTalles",
     highlights: [
-      "Listing cards con carruseles de imágenes dinámicos",
-      "Auth con Firebase + persistencia en Firestore",
-      "Emails de confirmación automatizados",
-      "UI/UX optimizado para conversión",
+      'E-commerce con React y TypeScript',
     ],
-    tags: ["Angular", "Firebase Auth", "Firestore", "Nodemailer"],
-    color: "violet",
+    tags: ["React", "Auth", "PostgreSQL", "TailwindCSS"],
+    color: "blue",
     links: [
-      { label: "Demo", url: "https://regaaron.github.io/Home-Lock/descubre" },
-      { label: "GitHub", url: "https://regaaron.github.io/Home-Lock/descubre" },
+      { label: "Demo", url: "https://teslo-shop-react-aaron.netlify.app/" },
+      { label: "GitHub", url: "https://github.com/regaaron/Teslo-shop" },
     ],
-    images: ["/home-lock.png"],
+    images: ["/Teslo-shop.png"],
   },
   {
     id: 4,
@@ -121,6 +118,29 @@ export const PROJECTS = [
     ],
     images: ["/zombies.png"],
   },
+
+  {
+    id: 6,
+    title: "Home-Lock",
+    subtitle: "Airbnb-style Rental Platform",
+    period: "Ene 2023 — May 2023",
+    featured: false,
+    description:
+      "Plataforma de reservas de propiedades con carruseles interactivos, autenticación Firebase, persistencia Firestore y sistema de confirmaciones por email.",
+    highlights: [
+      "Listing cards con carruseles de imágenes dinámicos",
+      "Auth con Firebase + persistencia en Firestore",
+      "Emails de confirmación automatizados",
+      "UI/UX optimizado para conversión",
+    ],
+    tags: ["Angular", "Firebase Auth", "Firestore", "Nodemailer"],
+    color: "violet",
+    links: [
+      { label: "Demo", url: "https://regaaron.github.io/Home-Lock/descubre" },
+      { label: "GitHub", url: "https://regaaron.github.io/Home-Lock/descubre" },
+    ],
+    images: ["/home-lock.png"],
+  },
 ];
 
 export const MINI_PROJECTS = [
@@ -133,17 +153,17 @@ export const MINI_PROJECTS = [
     link: "https://github.com/regaaron/heroes-app",
     image: "/heroes.png", // opcional — borra esta línea si no tienes imagen
   },
-  {
-    id: "m2",
-    title: "Otro proyecto",
-    description: "Descripción breve aquí",
-    tags: ["Java", "OOP"],
-    color: "amber",
-    link: "https://github.com/regaaron/",
-    // sin imagen — también válido
-    image: "gruas.jpg",
-  },
-  // Agrega más aquí...
+  // {
+  //   id: "m2",
+  //   title: "Otro proyecto",
+  //   description: "Descripción breve aquí",
+  //   tags: ["Java", "OOP"],
+  //   color: "amber",
+  //   link: "https://github.com/regaaron/",
+  //   // sin imagen — también válido
+  //   image: "gruas.jpg",
+  // },
+  
 ];
 
 export const Projects = () => {
